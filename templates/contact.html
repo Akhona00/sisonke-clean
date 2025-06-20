@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Page</title>
+    <link rel="stylesheet" href="static/css/contacts.css">
+</head>
+<body>
+    <nav class="Navbar">
+        <div class="logo">
+            <img src="static/image/Polish_20241002_175631695.png" width="90px" height="70px" alt="Logo">
+        </div>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="service.html">Service</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li class="dropdown">
+                <a href="/Industry">Industry</a>
+                <div class="dropdown-content">
+                    <a href="/industry/healthcare">Healthcare & Medical</a>
+                    <a href="/industry/education">Education & Training</a>
+                    <a href="/industry/retail">Retail & Fashion</a>
+                    <a href="/industry/hospitality">Hospitality & Tourism</a>
+                    <a href="/industry/construction">Construction & Real Estate</a>
+                    <a href="/industry/automotive">Automotive</a>
+                    <a href="/industry/food-beverage">Food & Beverage</a>
+                    <a href="/industry/technology">Technology & IT</a>
+                    <a href="/industry/finance">Finance & Banking</a>
+                    <a href="/industry/manufacturing">Manufacturing</a>
+                    <a href="/industry/nonprofit">Non-Profit Organizations</a>
+                    <a href="/industry/government">Government & Municipal</a>
+                </div>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+
+    <section class="contact">
+        <h1>Contact Us</h1>
+        <form action="contact" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="service">Service:</label>
+            <select id="service" name="service" required>
+                <option value="" disabled selected>Select a service</option>
+                <option value="logo-design">Logo Design</option>
+                <option value="tshirt-printing">T-Shirt Printing</option>
+                <option value="flyers">Flyers / Posters</option>
+                <option value="branding">Company Branding</option>
+                <option value="social-media">Social Media Design</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <section class="map">
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3442.1077468231594!2d30.36774361509185!3d-29.66649408199426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ef70587c8c4aeb5%3A0xc9484b1746eac8d5!2sEdendale%2C%20Pietermaritzburg!5e0!3m2!1sen!2sza!4v1687454368121!5m2!1sen!2sza" 
+            width="100%" 
+            height="300" 
+            style="border:0;" 
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </section>
+
+    <footer>
+        <div class="footer-container">
+            <div class="address">
+                <h2>Address</h2>
+                <p>
+                    1492 B4 ROAD <br>
+                    Edendale A <br>
+                    Pietermaritzburg, 3217 <br>
+                    Kwa-Zulu Natal
+                </p>
+            </div>
+    
+            <div class="social"> 
+                <h2>Social</h2>
+                <a href="#">
+                    <img src="static/image/facebook.png" alt="Facebook" height="40px" width="40px">
+                </a>
+                <a href="#">
+                    <img src="static/image/instagram.png" alt="Instagram" height="40px" width="40px">
+                </a>
+            </div>
+    
+            <div class="support">
+                <h2>Support</h2>
+                <div class="contact-info">
+                    <img src="static/image/phone-call.png" alt="Phone: +27 (78) 4643-899" title="+27 (78) 4643-899" height="30px" width="30px">
+                    <img src="static/image/email.png" alt="Email: info@sisonkesolutions.co.za" title="info@sisonkesolutions.co.za" height="30px" width="30px">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

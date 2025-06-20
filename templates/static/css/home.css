@@ -1,0 +1,525 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    font-style: italic;
+    margin: 0;
+    padding: 0
+}
+
+.logo {
+    background-color: white;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 30px;
+    
+}
+
+.logo img {
+    width: 90px;
+    height: 70px;
+    object-fit: contain;
+}
+.Navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.Navbar ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.Navbar li {
+    margin-right: 20px;
+}
+
+.Navbar ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 20px;
+}
+
+.Navbar ul li a:hover {
+    text-decoration: underline;
+    color: #063d3a;
+}
+
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 220px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    z-index: 1000;
+    border-radius: 8px;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: all 0.3s ease;
+}
+
+.dropdown-content a {
+    color: #333 !important;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px !important;
+    transition: all 0.3s ease;
+    border-left: 3px solid transparent;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+    color: #063d3a !important;
+    border-left: 3px solid #063d3a;
+    transform: translateX(5px);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.dropdown > a::after {
+    content: ' ▼';
+    font-size: 12px;
+    margin-left: 5px;
+    transition: transform 0.3s ease;
+}
+
+.dropdown:hover > a::after {
+    transform: rotate(180deg);
+}
+
+
+section.home {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 100px;
+}
+
+.home-content {
+    flex: 1;
+}
+
+.home-image {
+    flex: 1;
+    text-align: center;
+    opacity: 0;
+    animation: slide-in 0.8s ease-in-out 0.3s forwards;
+}
+
+/* Define the slide-in keyframes */
+@keyframes slide-in {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.home-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.button {
+    background-color: #075542;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.button:hover {
+    background-color: #45a049;
+}
+
+.home-content .big-font {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.home-content .green-font {
+    color: #064c38;
+    font-weight:550;
+}
+
+.home-content .small-font {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+
+/* section paragraph1 has to be inside a rectangle that has a green background */
+section.paragraph1 {
+    background-color: #054b53;
+    color: white;
+    padding: 40px;
+    border-radius: 50px;
+    margin: 20px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px
+}
+
+section.paragraph1 h4 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+/* section paragraph2 have three cubes that align next to one another, background is white hover with green shadow*/
+section.paragraph2 {
+    background-color: white;
+    color: black;
+    padding: 40px;
+    border-radius: 50px;
+    margin: 20px;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 80px;
+}
+
+section.paragraph2 span {
+    color: #064c38;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+section.break {
+    text-align: center;
+    margin: 20px;
+    background-image: url('duotone.png');
+    background-size: cover;
+    padding: 200px;
+    border-radius: 50px;
+    margin-bottom: 80px;
+}
+
+section.break h4 {
+    font-size: 3rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    margin: 0;
+}
+
+.slideshow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 20px;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 20px;
+    color: #fff
+}
+
+.card {
+    background-color: #fff;
+    padding:30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #e0e0e0
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(7, 124, 104, 0.2);
+}
+
+.card.title {
+    font-size: 1.5rem;
+    color: #064c38;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.card-text {
+    font-size: 1rem;
+    color : #064c38;
+    line-height: 1.6;
+}
+
+.clients {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #ffffff 0%, #ffffff 100%);
+}
+
+.clients h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #046262;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+}
+
+.clients .carousel {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    max-height: 400px;
+    margin: 0 auto;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 20px 60px rgba(4, 104, 113, 0.15);
+    border: 3px solid rgba(255,255,255,0.8);
+    backdrop-filter: blur(10px);
+}
+
+.clients .slideshow {
+    display: flex;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    width: 1500%; /* 15 slides * 100% */
+}
+
+.clients .slideshow > div {
+    width: 6.555%; /* 100% / 15 slides */
+    flex-shrink: 0;
+    height: 250px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid #f0f0f0;
+    position: relative;
+    overflow: hidden;
+}
+
+.clients .slideshow > div:last-child {
+    border-right: none;
+}
+
+.clients .slideshow img {
+    max-width: 90%;
+    max-height: 90%;
+    object-fit: contain;
+    filter: grayscale(20%) contrast(1.1);
+    transition: all 0.3s ease;
+}
+
+.clients .slideshow img:hover {
+    filter: grayscale(0%) contrast(1.2);
+    transform: scale(1.05);
+}
+
+/* Navigation dots */
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(44, 62, 80, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #3498db;
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: #2980b9;
+}
+
+/* Navigation arrows */
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255,255,255,0.9);
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 20px;
+    color: #2c3e50;
+    transition: all 0.3s ease;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.carousel-nav:hover {
+    background: #3498db;
+    color: white;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-nav.prev {
+    left: 20px;
+}
+
+.carousel-nav.next {
+    right: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section.home {
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+
+    .home-content .big-font {
+        font-size: 36px;
+    }
+
+    .home-content .small-font {
+        font-size: 18px;
+    }
+
+    .Navbar {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .Navbar ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .services-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .clients h3 {
+        font-size: 2rem;
+    }
+
+    .carousel {
+        max-width: 100%;
+        margin: 0 10px;
+    }
+
+    .slideshow > div {
+        height: 150px;
+    }
+
+    .carousel-nav {
+        width: 40px;
+        height: 40px;
+        font-size: 16px;
+    }
+
+    .carousel-nav.prev {
+        left: 10px;
+     }
+
+    .carousel-nav.next {
+         right: 10px;
+    }
+
+    section.paragraph1,
+    section.paragraph2,
+    section.break {
+        margin: 20px 10px;
+        padding: 30px 20px;
+    }
+
+    section.break h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .slideshow > div {
+        height: 120px;
+    }
+
+    .home-content .big-font {
+        font-size: 28px;
+    }
+
+    .home-content .small-font {
+        font-size: 16px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+footer {
+    background-color: #054b53;
+    color: white;
+    padding: 40px 20px;
+    margin-top: 50px;
+    font-size: 14px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer h2 {
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+
+.address,
+.social,
+.support {
+    flex: 1;
+    min-width: 250px;
+}
+
+.social a {
+    margin-right: 10px;
+}
+
+.contact-info img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
